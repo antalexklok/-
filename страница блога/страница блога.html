@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="widht=device-widht, initial-skale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Домашняя страница</title>
+    <style>
+        #tr-popup,#tr-popup * {all: unset;}#tr-popup {font: 15px "Segoe UI", Arial, Helvetica, sans-serif;color: #222;padding: 24px;display: block;z-index: 2147483647;position: absolute;max-width: 400px;min-width: 300px;direction: ltr;text-align: left;background: #fff;border-radius: 2px;box-sizing: border-box;box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(51, 51, 51, 0.3);transition: opacity, visibility;transition-duration: 0.2s;}#tr-popup[data-hidden="true"] {opacity: 0;visibility: hidden;}#tr-popup[data-position="top"] {margin-top: -12px;}#tr-popup[data-position="bottom"] {margin-top: 12px;}#tr-popup .tr-popup__arrow {top: 100%;left: 50%;width: 26px;height: 12px;display: block;position: absolute;margin-left: -13px;margin-top: -1px;background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIxMiI+PHBhdGggZD0iTTAgMGwxMyAxMkwyNiAweiIgb3BhY2l0eT0iLjEiLz48cGF0aCBkPSJNMSAwbDEyIDExTDI1IDB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+") no-repeat;}#tr-popup[data-position="bottom"] .tr-popup__arrow {top: auto;bottom: 100%;margin-bottom: -1px;transform: rotate(180deg);}#tr-popup .tr-popup__value,#tr-popup .tr-popup__block {word-wrap: break-word;white-space: pre-wrap;}[data-type="trSpan"][data-translated="true"][data-source-lang="ja"],[data-type="trSpan"][data-translated="true"][data-source-lang="zh"],#tr-popup .tr-popup__title_original,#tr-popup .tr-popup__block_a,#tr-popup .tr-popup__block_b,#tr-popup .tr-popup__button {font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;}#tr-popup .tr-popup__title_original {font-weight: bold;}#tr-popup .tr-popup__block {display: block;}#tr-popup .tr-popup__link {cursor: pointer;-webkit-user-select: none;user-select: none;}#tr-popup .tr-popup__link_suggest {color: #1378d7;font-size: 13px;line-height: 18px;margin-right: 22px;}#tr-popup .tr-popup__link_suggest:hover,#tr-popup .tr-popup__link_suggest:active {color: #000;}#tr-popup .tr-popup__logo {height: 18px;opacity: 0.3;display: inline-block;transition: opacity 0.2s;vertical-align: top;}#tr-popup .tr-popup__logo_company {width: 34px;filter: brightness(0);background: url("https://yastatic.net/s3/trbro/v20.5.1.0/i/service_logo.svg");background-size: 34px;background-position: 0 -18px;}#tr-popup[lang="ru"] .tr-popup__logo_company {background-position: 0 0;}#tr-popup .tr-popup__logo_service {width: 42px;background: url("https://yastatic.net/s3/trbro/v20.5.1.0/i/service_name.svg");margin-left: 2px;background-size: 63px;background-position: 0 -18px;}#tr-popup[lang="ru"] .tr-popup__logo_service {width: 57px;background-position: 0 0;}#tr-popup[lang="uk"] .tr-popup__logo_service {width: 56px;background-position: 0 -36px;}#tr-popup[lang="tr"] .tr-popup__logo_service {width: 25px;background-position: 0 -54px;}#tr-popup .tr-popup__link_service:hover .tr-popup__logo {opacity: 0.6;}#tr-popup .tr-popup__input {width: 100%;height: 80px;resize: none;border: 2px solid #e5e5e5;padding: 8px;display: block;font-size: 15px;box-sizing: border-box;border-radius: 2px;}#tr-popup .tr-popup__input:focus {border-color: #bbb;}#tr-popup .tr-popup__block_a,#tr-popup .tr-popup__block_b {margin-top: 16px;}#tr-popup .tr-popup__block_a {display: flex;justify-content: space-between;}#tr-popup .tr-popup__block_b {position: relative;}#tr-popup .tr-popup__block_submit {text-align: right;margin-top: 24px;}#tr-popup .tr-popup__overlay {top: 0;left: 0;right: 0;bottom: 0;position: absolute;}#tr-popup .tr-popup__overlay_submitted {color: #999;z-index: 1;display: flex;background: #fff;align-items: center;justify-content: center;}#tr-popup:not([data-expanded="true"]) .tr-popup__block_b,#tr-popup:not([data-submitted="true"]) .tr-popup__overlay_submitted {display: none;}#tr-popup .tr-popup__menu {font-size: 13px;opacity: 0;visibility: hidden;white-space: nowrap;position: absolute;bottom: 100%;margin-bottom: 8px;padding: 4px 14px;z-index: 1;background-color: #f5f5f5;border: 1px solid #bbb;border-radius: 2px;box-shadow: 0px 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 14px 0 rgba(51, 51, 51, 0.3);}#tr-popup[data-menu-position="left"] .tr-popup__menu {right: 0;}#tr-popup[data-menu="true"] .tr-popup__menu {opacity: 1;visibility: visible;}#tr-popup .tr-popup__menu:hover {background-color: #efefef;}#tr-popup .tr-popup__button {cursor: pointer;display: inline-block;-webkit-user-select: none;user-select: none;}#tr-popup .tr-popup__button_menu,#tr-popup .tr-popup__button_close {top: 4px;width: 20px;height: 20px;opacity: 0.3;position: absolute;}#tr-popup .tr-popup__button_close {right: 4px;background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBhdGggZD0iTTkuMjkzIDEwTDYuMTQ2IDYuODU0YS41LjUgMCAxIDEgLjcwOC0uNzA4TDEwIDkuMjkzbDMuMTQ2LTMuMTQ3YS41LjUgMCAwIDEgLjcwOC43MDhMMTAuNzA3IDEwbDMuMTQ3IDMuMTQ2YS41LjUgMCAwIDEtLjcwOC43MDhMMTAgMTAuNzA3bC0zLjE0NiAzLjE0N2EuNS41IDAgMCAxLS43MDgtLjcwOEw5LjI5MyAxMHoiLz48L3N2Zz4=");}#tr-popup .tr-popup__button_menu {right: 24px;background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCI+PHBhdGggZD0ibTUgNnYxaDEwdi0xaC0xMHptMCAzdjFoMTB2LTFoLTEwem0wIDN2MWgxMHYtMWgtMTB6Ii8+PC9zdmc+");}#tr-popup .tr-popup__button_menu:hover,#tr-popup .tr-popup__button_close:hover {opacity: 0.5;}#tr-popup .tr-popup__button_close:active {opacity: 0.6;}#tr-popup[data-menu="true"] .tr-popup__button_menu {opacity: 1;}#tr-popup .tr-popup__button_submit {color: #000;height: 28px;padding: 0 16px;font-size: 13px;min-width: 112px;background: #fc0;box-sizing: border-box;text-align: center;line-height: 28px;border-radius: 2px;}#tr-popup .tr-popup__button_submit:hover {background: #ffb800;}#tr-popup .tr-popup__button_submit:active {background: #ffa400;}#tr-popup[data-invalid="true"] .tr-popup__button_submit {color: rgba(0, 0, 0, 0.5);cursor: default;background: rgba(0, 0, 0, 0.1);}[data-type="trSpan"][data-selected="true"] {color: #222 !important;background: #cce4f7 !important;}[data-type="trSpan"] {font-size: inherit !important;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header container flex">
+            <div>
+                <a href="/" class="logo cursor links">
+                    <ya-tr-span data-index="0-0" data-translated="true" data-source-lang="ru" data-value="HotCoffeE" data-translation="Горячий кофе" data-ch="0" data-type="trSpan">Горячий кофе</ya-tr-span>
+                </a>
+            </div>
+        <div class="form">
+            <form actoin method="get">
+                <button class="glass cursor">
+                    <img src="ico/glass.svg" alt="Поиск">
+                </button>
+                <input class="input" type="text" placeholder="поиск...">
+            </form>
+        </div>
+        <nav class="header_nav">
+            <a href class="text links">
+                <ya-tr-span data-index="1-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Home" data-translation="Главная" data-ch="0" data-type="trSpan">Главная</ya-tr-span>
+            </a>
+            <a href class="text links">
+                <ya-tr-span data-index="2-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Articles" data-translation="Статьи" data-ch="0" data-type="trSpan">Статьи</ya-tr-span>
+            </a>
+            <a href>
+                <img src="ico/shoot.svg" alt="Instagram">
+            </a>
+            <a href>
+                <img src="ico/bird.svg" alt="Twitter">
+            </a>
+            <a href>
+                <img src="ico/in.svg" alt="в">
+            </a>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="slider container flex">
+        <div>
+            <p class="make_better_coffe">
+                <ya-tr-span data-index="3-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Make better" data-translation="Приготовьте лучший" data-ch="0" data-type="trSpan">Приготовьте лучший</ya-tr-span>
+                <br>
+                <ya-tr-span data-index="3-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value=" coffee" data-translation=" кофе" data-ch="0" data-type="trSpan"> кофе</ya-tr-span>
+                <img src="img/CUP.png" alt="чашка">
+            </p>
+            <p class="why">
+                <ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="why learn how to blog?" data-translation="зачем учиться вести блог?" data-ch="0" data-type="trSpan">зачем учиться вести блог?</ya-tr-span>
+            </p>
+        </div>
+        <div>
+            <img src="img/croods 1.png" alt="изображение" class="croods1" widht="476px">
+        </div>
+    </div>
+    <div class="about container flex border">
+        <div class="about_text">
+            <h2 class="long">
+                <ya-tr-span data-index="5-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="long established" data-translation="давно установленный" data-ch="0" data-type="trSpan">давно установленный</ya-tr-span>
+            </h2>
+            <p class="it_is">
+                <ya-tr-span data-index="6-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. " data-translation="Давно известно, что читатель будет отвлекаться на читаемое содержимое страницы при просмотре ее макета. " data-ch="0" data-type="trSpan">Давно известно, что читатель будет отвлекаться на читаемое содержимое страницы при просмотре ее макета. </ya-tr-span>
+                <ya-tr-span data-index="6-1" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="The point of using Lorem Ipsum is that...." data-translation="Смысл использования Lorem Ipsum заключается в том, что...." data-ch="0" data-type="trSpan">Смысл использования Lorem Ipsum заключается в том, что....</ya-tr-span>
+            </p>
+            <div class="flex about_more">
+                <p class="about-date date">Nov 09th 2022</p>
+                <a href class="about_link links_cursor">Read more</a>
+            </div>
+        </div>
+        <div>
+            <img src="img/man.png" alt="человек">
+        </div>
+    </div>
+    <div class="news container flex">
+        <div class="news_block border direction">
+            <img src="img/comp.png" alt="laptop" width="297px">
+            <h3 class="le">long established</h3>
+            <p class="it_is_for_blocks">
+                "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that... "
+            </p>
+            <div class>
+                <div>
+                    <p class="news_date date">Nov 8th 2022</p>
+                </div>
+                <div>
+                    <a href class="news_link links cursor">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="news_block border direction">
+            <div>
+                <img src="img/people.png" alt="people" width="297px">
+            </div>
+            <h3 class="le">long established</h3>
+            <div>
+                <p class="it_is_for_blocks">
+                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that..."
+                </p>
+            </div>
+            <div class>
+                <div>
+                    <p class="news_date date">Nov 08th 2022</p>
+                </div>
+                <div>
+                    <a href class="news_link links cursor">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="news_block border direction">
+            <div>
+                <img src="img/comp2.png" alt="laptop" width="297px">
+            </div>
+            <h3 class="le">long estadlished</h3>
+            <div>
+                <p class="it_is_for blocks">
+                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that...."
+                </p>
+            </div>
+            <div class>
+                <div>
+                    <p class="news_date date">Nov 08th 2022</p>
+                </div>
+                <div>
+                    <a href class="news_link links cursor">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details container">
+        <div class="block2 direction">
+            <div>
+                <p class="what_is">
+                    <ya-tr-span data-index="11-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="What is Lorem Ipsum?" data-translation="Что такое Lorem Ipsum?" data-ch="0" data-type="trSpan">Что такое Lorem Ipsum?</ya-tr-span>
+                </p>
+            </div>
+            <div>
+                <p class="it_is_block2">
+                    <ya-tr-span data-index="12-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. " data-translation="Давно известно, что читатель будет отвлекаться на читаемое содержимое страницы при просмотре ее макета. " data-ch="0" data-type="trSpan">Давно известно, что читатель будет отвлекаться на читаемое содержимое страницы при просмотре ее макета. </ya-tr-span>
+                    <ya-tr-span data-index="12-1" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="The point of using Lorem Ipsum is that it has a more-or-less normal distribution..." data-translation="Смысл использования Lorem Ipsum заключается в том, что он имеет более или менее нормальное распределение..." data-ch="0" data-type="trSpan" data-selected="false">Смысл использования Lorem Ipsum заключается в том, что он имеет более или менее нормальное распределение...</ya-tr-span>
+                </p>
+            </div>
+            <div class="container3_2">
+                <div>
+                    <p class="november_for_blocks" style="margin-left: 63px">
+                        <ya-tr-span data-index="13-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="May 20th 2020" data-translation="20 мая 2020 года" data-ch="0" data-type="trSpan">08 ноября 2022 года</ya-tr-span>
+                    </p>
+                </div>
+                <div>
+                    <a href class="details_link links cursor">
+                        <ya-tr-span data-index="14-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Read more" data-translation="Подробнее" data-ch="0" data-type="trSpan">Подробнее</ya-tr-span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="img/compBig.png" alt="ноутбук" widht="525px" height="500px">
+        </div>
+    </div>
+    <div class="see_more">
+        <img src="img/seemore.png" alt="кнопка" class="cursor">
+    </div>
+</main>
+<footer class="footer container">
+    <div>
+        <a>
+            <ya-tr-span data-index="8-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="hotcoffee 2022" data-translation="авторское право hotcoffee 2022" data-ch="0" data-type="trSpan">авторское право hotcoffee 2022</ya-tr-span>
+        </a>
+        <ya-tr-span data-index="8-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value=" copyright all rights reserved" data-translation=" все права защищены" data-ch="0" data-type="trSpan"> все права защищены</ya-tr-span>
+    </div>
+    <div class="links_and_icons cursor">
+        <a href>
+            <img src="ico/shoot.svg" alt="Instagram">
+        </a>
+        <a href>
+            <img src="ico/bird.svg" alt="Twitter">
+        </a>
+        <a href>
+            <img src="ico/in.svg" alt="в">
+        </a>
+    </div>
+</footer>
+</body>
+</html>
